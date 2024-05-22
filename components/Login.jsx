@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -13,7 +14,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://www.ecobovinos.somee.com/api/User/authenticate', {
+      const response = await fetch('https://www.ecobovinos.somee.com/api/User/authenticate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,6 +64,9 @@ function Login() {
         </div>
         <button type="submit"className={styles.loginButton}>Iniciar sesión</button>
       </form>
+      <p>
+          ¿No tienes una cuenta? <Link to="/register" className={styles.registerLink}>Regístrate aquí</Link>
+      </p>
     </div>
     </div>
     

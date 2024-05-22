@@ -19,7 +19,7 @@ const DevicesTable = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/Devices",
+        "https://www.ecobovinos.somee.com/api/Devices",
         {
           method: "POST",
           headers: {
@@ -53,7 +53,7 @@ const DevicesTable = () => {
   const handleUpdateDevice = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Devices/${editingDevice.deviceId}`,
+        `https://www.ecobovinos.somee.com/api/Devices/${editingDevice.deviceId}`,
         {
           method: "PUT",
           headers: {
@@ -91,7 +91,7 @@ const DevicesTable = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Devices/${searchId}`
+        `https://www.ecobovinos.somee.com/api/Devices/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -106,7 +106,7 @@ const DevicesTable = () => {
   const handleDelete = async (deviceId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Devices/${deviceId}`,
+        `https://www.ecobovinos.somee.com/api/Devices/${deviceId}`,
         {
           method: "DELETE",
         }
@@ -126,7 +126,7 @@ const DevicesTable = () => {
     const fetchDeviceData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/Devices";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/Devices";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();

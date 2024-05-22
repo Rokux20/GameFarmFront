@@ -18,7 +18,7 @@ const GameTable = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/Game",
+        "https://www.ecobovinos.somee.com/api/Game",
         {
           method: "POST",
           headers: {
@@ -50,7 +50,7 @@ const GameTable = () => {
   const handleUpdateGame = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Game/${editingGame.gameId}`,
+        `https://www.ecobovinos.somee.com/api/Game/${editingGame.gameId}`,
         {
           method: "PUT",
           headers: {
@@ -87,7 +87,7 @@ const GameTable = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Game/${searchId}`
+        `https://www.ecobovinos.somee.com/api/Game/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -102,7 +102,7 @@ const GameTable = () => {
   const handleDelete = async (gameId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Game/${gameId}`,
+        `https://www.ecobovinos.somee.com/api/Game/${gameId}`,
         {
           method: "DELETE",
         }
@@ -120,7 +120,7 @@ const GameTable = () => {
     const fetchGameData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/Game";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/Game";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();

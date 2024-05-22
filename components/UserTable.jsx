@@ -17,7 +17,7 @@ const UserTable = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/User",
+        "https://www.ecobovinos.somee.com/api/User",
         {
           method: "POST",
           headers: {
@@ -47,7 +47,7 @@ const UserTable = () => {
   const handleUpdateUser = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/User/${editingUser.userId}`,
+        `https://www.ecobovinos.somee.com/api/User/${editingUser.userId}`,
         {
           method: "PUT",
           headers: {
@@ -82,7 +82,7 @@ const UserTable = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/User/${searchId}`
+        `https://www.ecobovinos.somee.com/api/User/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -97,7 +97,7 @@ const UserTable = () => {
   const handleDelete = async (userId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/User/${userId}`,
+        `https://www.ecobovinos.somee.com/api/User/${userId}`,
         {
           method: "DELETE",
         }
@@ -115,7 +115,7 @@ const UserTable = () => {
     const fetchUserData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/User";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/User";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();
@@ -242,7 +242,7 @@ const UserTable = () => {
                   <tr key={user.userId}>
                     <td>{user.userId}</td>
                     <td>{user.usuario}</td>
-                    <td>{user.password}</td>
+                    <td>{'*'.repeat(user.password.length)}</td>
                     <td>
                       <button
                         className="btn btn-sm btn-warning me-2"
@@ -284,7 +284,7 @@ const UserTable = () => {
                   <tr key={searchResult.userId}>
                     <td>{searchResult.userId}</td>
                     <td>{searchResult.usuario}</td>
-                    <td>{searchResult.password}</td>
+                    <td>{'*'.repeat(searchResult.password.length)}</td>
                     <td>
                       <button
                         className="btn btn-sm btn-warning me-2"

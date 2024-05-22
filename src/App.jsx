@@ -1,3 +1,4 @@
+// App.js
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import DevicesTypeEnergyTable from '../components/DevicesTypeEnergyTable';
 import GameTable from '../components/GameTable';
@@ -9,8 +10,8 @@ import CropsTable from '../components/CropsTable';
 import DevicesTable from '../components/DevicesTable';
 import Login from '../components/Login';
 import NavBar from '../components/Navbar';
+import Register from '../components/Register';
 import './App.css';
-
 
 function App() {
   return (
@@ -22,14 +23,16 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/login' || location.pathname === '/';
+  const noNavBarRoutes = ['/login', '/', '/register'];
+  const shouldRenderNavBar = !noNavBarRoutes.includes(location.pathname);
 
   return (
     <div>
-      {!isLoginPage && <NavBar />}
+      {shouldRenderNavBar && <NavBar />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/crops" element={<CropsTable />} />
         <Route path="/devices" element={<DevicesTable />} />
         <Route path="/type-energy" element={<TypeEnergyTable />} />

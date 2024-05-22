@@ -18,7 +18,7 @@ const TasksTable = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/Tasks",
+        "https://www.ecobovinos.somee.com/api/Tasks",
         {
           method: "POST",
           headers: {
@@ -48,7 +48,7 @@ const TasksTable = () => {
   const handleUpdateTask = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Tasks/${editingTask.taskId}`,
+        `https://www.ecobovinos.somee.com/api/Tasks/${editingTask.taskId}`,
         {
           method: "PUT",
           headers: {
@@ -84,7 +84,7 @@ const TasksTable = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Tasks/${searchId}`
+        `https://www.ecobovinos.somee.com/api/Tasks/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -99,7 +99,7 @@ const TasksTable = () => {
   const handleDelete = async (taskId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Tasks/${taskId}`,
+        `https://www.ecobovinos.somee.com/api/Tasks/${taskId}`,
         {
           method: "DELETE",
         }
@@ -117,7 +117,7 @@ const TasksTable = () => {
     const fetchTaskData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/Tasks";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/Tasks";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();

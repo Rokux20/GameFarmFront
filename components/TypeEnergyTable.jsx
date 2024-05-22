@@ -16,7 +16,7 @@ const TypeEnergyTable = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/TypeEnergy",
+        "https://www.ecobovinos.somee.com/api/TypeEnergy",
         {
           method: "POST",
           headers: {
@@ -44,7 +44,7 @@ const TypeEnergyTable = () => {
   const handleUpdateTypeEnergy = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/TypeEnergy/${editingTypeEnergy.typeEnergyId}`,
+        `https://www.ecobovinos.somee.com/api/TypeEnergy/${editingTypeEnergy.typeEnergyId}`,
         {
           method: "PUT",
           headers: {
@@ -77,7 +77,7 @@ const TypeEnergyTable = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/TypeEnergy/${searchId}`
+        `https://www.ecobovinos.somee.com/api/TypeEnergy/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -92,7 +92,7 @@ const TypeEnergyTable = () => {
   const handleDelete = async (typeEnergyId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/TypeEnergy/${typeEnergyId}`,
+        `https://www.ecobovinos.somee.com/api/TypeEnergy/${typeEnergyId}`,
         {
           method: "DELETE",
         }
@@ -110,7 +110,7 @@ const TypeEnergyTable = () => {
     const fetchTypeEnergyData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/TypeEnergy";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/TypeEnergy";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();

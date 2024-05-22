@@ -1,14 +1,14 @@
+/* Register.module.css */
 .pageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    background-color: #f0f0f0; 
+    height: 100vh; /* Altura de la vista completa */
+    background-color: #f0f0f0; /* Color de fondo opcional */
   }
   
-.loginContainer {
+  .registerContainer {
     width: 300px;
-    margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
     background-color: #ffffff;
@@ -16,17 +16,17 @@
     text-align: center;
   }
   
-  .loginContainer h2 {
+  .registerContainer h2 {
     margin-bottom: 20px;
   }
   
-  .loginContainer label {
+  .registerContainer label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
   
-  .loginContainer input {
+  .registerContainer input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -34,7 +34,7 @@
     border-radius: 4px;
   }
   
-  .loginButton {
+  .registerButton {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -44,16 +44,21 @@
     cursor: pointer;
   }
   
-  .loginButton:hover {
+  .registerButton:hover {
     background-color: #0056b3;
   }
-
-  .registerLink {
+  
+  .loginLink {
     color: #007bff;
     text-decoration: none;
   }
   
-  .registerLink:hover {
+  .loginLink:hover {
     text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
   }
   

@@ -17,7 +17,7 @@ const Table = () => {
 
     try {
       const response = await fetch(
-        "http://www.ecobovinos.somee.com/api/Farms",
+        "https://www.ecobovinos.somee.com/api/Farms",
         {
           method: "POST",
           headers: {
@@ -46,7 +46,7 @@ const Table = () => {
   const handleUpdateFarm = async () => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Farms/${editingFarm.farmId}`,
+        `https://www.ecobovinos.somee.com/api/Farms/${editingFarm.farmId}`,
         {
           method: "PUT",
           headers: {
@@ -80,7 +80,7 @@ const Table = () => {
 
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Farms/${searchId}`
+        `https://www.ecobovinos.somee.com/api/Farms/${searchId}`
       );
       if (!response.ok) throw new Error("Failed to fetch");
 
@@ -95,7 +95,7 @@ const Table = () => {
   const handleDelete = async (farmId) => {
     try {
       const response = await fetch(
-        `http://www.ecobovinos.somee.com/api/Farms/${farmId}`,
+        `https://www.ecobovinos.somee.com/api/Farms/${farmId}`,
         {
           method: "DELETE",
         }
@@ -114,7 +114,7 @@ const Table = () => {
     const fetchFarmData = async () => {
       try {
         const proxyUrl = "https://api.allorigins.win/raw?url=";
-        const apiUrl = "http://www.ecobovinos.somee.com/api/Farms";
+        const apiUrl = "https://www.ecobovinos.somee.com/api/Farms";
         const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();
