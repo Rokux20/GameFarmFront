@@ -5,21 +5,21 @@
 }
 
 body {
-  background-color: #f3f3f3; /* Color de fondo del cuerpo */
+  background-color: #f3f3f3;
   font-family: 'Calibri', sans-serif;
 }
 
 .navbar {
-  background-image: linear-gradient(135deg, #8e44ad, #3498db, #7f8c8d, #9b59b6); /* Gradiente de colores */
+  background-image: linear-gradient(135deg, #8e44ad, #3498db, #7f8c8d, #9b59b6); 
   padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar ul {
-  list-style: none; /* Eliminamos los puntos de la lista */
+  list-style: none;
   display: flex;
-  align-items: center; /* Centramos verticalmente los elementos */
+  align-items: center;
 }
 
 .navbar ul li {

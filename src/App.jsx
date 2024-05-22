@@ -1,4 +1,3 @@
-// App.js
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import DevicesTypeEnergyTable from '../components/DevicesTypeEnergyTable';
 import GameTable from '../components/GameTable';

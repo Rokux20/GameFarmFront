@@ -1,10 +1,9 @@
-/* Register.module.css */
 .pageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura de la vista completa */
-    background-color: #f0f0f0; /* Color de fondo opcional */
+    height: 100vh; 
+    background-color: #f0f0f0; 
   }
   
   .registerContainer {
